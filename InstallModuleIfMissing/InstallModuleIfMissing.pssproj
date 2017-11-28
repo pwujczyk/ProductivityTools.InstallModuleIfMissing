@@ -7,7 +7,8 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>MyApplication</RootNamespace>
     <AssemblyName>MyApplication</AssemblyName>
-    <Name>Install-ModuleIfMissing</Name>
+    <Name>InstallModuleIfMissing</Name>
+    <ProjectHome />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -28,9 +29,9 @@
   </PropertyGroup>
   <ItemGroup />
   <ItemGroup>
-    <Compile Include="Install-ModuleIfMissing.psd1" />
-    <Compile Include="Install-ModuleIfMissing.psm1" />
-    <Compile Include="Install-ModuleIfMissing.tests.ps1" />
+    <Compile Include="InstallModuleIfMissing.psd1" />
+    <Compile Include="InstallModuleIfMissing.psm1" />
+    <Compile Include="InstallModuleIfMissing.tests.ps1" />
     <Compile Include="Runner.ps1" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
