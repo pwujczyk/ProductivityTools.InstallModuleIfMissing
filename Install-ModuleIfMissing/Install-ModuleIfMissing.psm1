@@ -1,16 +1,18 @@
 <#
 	My Function
 #>
-function Install-ModuleIfMissing ([string]$moduleName) {
-	
+function Install-ModuleIfMissing () 
+{
+	[cmdletbinding()]	
+	param([string]$moduleName)
 	$module=Get-Module -Name $moduleName
+
 	if ($module -eq $null)
 	{
-		Write-Verbose "Module is not installed. Start installing..."
-
-		Install-Module $moduleName
 
 		Write-Verbose "Module is not installed. Start installing..."
+		Install-Module $moduleName -Verbose:$VerbosePreference
+		Write-Verbose "Install-Module finished"
 
 	}
 	else
@@ -19,3 +21,4 @@ function Install-ModuleIfMissing ([string]$moduleName) {
 	}
 
 }
+Export-ModuleMember Install-ModuleIfMissing
