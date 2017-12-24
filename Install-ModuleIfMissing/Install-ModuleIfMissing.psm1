@@ -5,7 +5,7 @@ function Install-ModuleIfMissing ()
 {
 	[cmdletbinding()]	
 	param([string]$moduleName)
-	$module=Get-Module -Name $moduleName
+	$module=Get-Module -ListAvailable -Name $moduleName
 
 	if ($module -eq $null)
 	{
