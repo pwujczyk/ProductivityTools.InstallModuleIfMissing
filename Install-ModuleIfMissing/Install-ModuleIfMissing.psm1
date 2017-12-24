@@ -1,7 +1,7 @@
 <#
 	My Function
 #>
-function Install-ModuleIfMissing () 
+function Install-ModuleIfMissing() 
 {
 	[cmdletbinding()]	
 	param([string]$moduleName)
@@ -15,7 +15,7 @@ function Install-ModuleIfMissing ()
 	}
 	else
 	{
-		Write-Verbose "Module is Installed"
+		Write-Verbose "Module $moduleName is Installed"
 	}
 
 }
