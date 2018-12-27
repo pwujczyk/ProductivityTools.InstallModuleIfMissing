@@ -29,8 +29,8 @@
   </PropertyGroup>
   <ItemGroup />
   <ItemGroup>
-    <Compile Include="ProductivityTools.InstallModuleIfMissing.psd1" />
-    <Compile Include="ProductivityTools.InstallModuleIfMissing.psm1" />
+    <Compile Include="ProductivityTools.PSInstallModuleIfMissing.psd1" />
+    <Compile Include="ProductivityTools.PSInstallModuleIfMissing.psm1" />
     <Compile Include="Runner.ps1" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

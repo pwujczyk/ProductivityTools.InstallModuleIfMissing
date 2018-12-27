@@ -1,4 +1,4 @@
 clear
 cd $PSScriptRoot
-Import-Module  ".\ProductivityTools.InstallModuleIfMissing.psm1" -Force
+Import-Module  ".\PProductivityTools.PSInstallModuleIfMissing.psm1" -Force
 Install-ModuleIfMissing Get-OneDriveDirectory -Verbose

@@ -12,10 +12,14 @@ To make it full usable before using it in the profile manual check of this modul
 
 
 ````
-$installModuleIfMissing=Get-Module -Name "Install-ModuleIfMissing"
-if ($module -eq $null)
+$installModuleIfMissing=Get-Module -ListAvailable -Name ProductivityTools.PSInstallModuleIfMissing
+if ($installModuleIfMissing -eq $null)
 {
-	Write-Host "Installing Install-ModuleIfMissing"
-	Install-Module "Install-ModuleIfMissing" -Force
+	Write-Host "Installing ProductivityTools.PSInstallModuleIfMissing"
+	Install-Module "ProductivityTools.PSInstallModuleIfMissing" -Force
+}
+else
+{
+	Write-Host "`ProductivityTools.PSInstallModuleIfMissing installed"
 }
 ````

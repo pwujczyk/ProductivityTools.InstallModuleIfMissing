@@ -12,7 +12,7 @@ function Install-ModuleIfMissing()
 	}
 	else
 	{
-		Write-Verbose "Module $moduleName is Installed"
+		Write-Output "Module $moduleName is Installed"
 	}
 
 }
