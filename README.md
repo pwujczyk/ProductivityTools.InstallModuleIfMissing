@@ -1,3 +1,8 @@
+[![GitHub](http://cdn.productivitytools.tech/Github40px.png)](https://github.com/pwujczyk/ProductivityTools.PSInstallModuleIfMissing)
+[![PowershellGallery](http://cdn.productivitytools.tech/Powershell40px.png)](https://www.powershellgallery.com/packages/ProductivityTools.InstallModuleIfMissing/)
+[![ProductivityTools](http://cdn.productivitytools.tech/Blog40px.png)](hhttp://www.productivitytools.tech/install-moduleifmissing/)
+ 
+
 # ProductivityTools.PSInstallModuleIfMissing
 Checks if given module exists and if not – install it (performs Install-Module method).
 
