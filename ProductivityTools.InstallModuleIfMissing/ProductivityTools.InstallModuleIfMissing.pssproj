@@ -7,7 +7,7 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>MyApplication</RootNamespace>
     <AssemblyName>MyApplication</AssemblyName>
-    <Name>Install-ModuleIfMissing</Name>
+    <Name>ProductivityTools.InstallModuleIfMissing</Name>
     <ProjectHome />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
