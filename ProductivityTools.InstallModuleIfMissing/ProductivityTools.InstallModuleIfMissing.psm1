@@ -6,6 +6,7 @@ function Install-ModuleIfMissing()
 
 	if ($module -eq $null)
 	{
+		Write-Output "Installing $moduleName"
 		Write-Verbose "Module  $moduleName is not installed. Start installing..."
 		Install-Module $moduleName -Force -Verbose:$VerbosePreference
 		Write-Verbose "Install-Module finished"
