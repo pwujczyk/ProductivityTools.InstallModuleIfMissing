@@ -1,10 +1,20 @@
-[![GitHub](http://cdn.productivitytools.tech/Github40px.png)](https://github.com/pwujczyk/ProductivityTools.PSInstallModuleIfMissing)
-[![PowershellGallery](http://cdn.productivitytools.tech/Powershell40px.png)](https://www.powershellgallery.com/packages/ProductivityTools.InstallModuleIfMissing/)
-[![ProductivityTools](http://cdn.productivitytools.tech/Blog40px.png)](hhttp://www.productivitytools.tech/install-moduleifmissing/)
- 
+<!--Category:PowerShell--> 
+ <p align="right">
+    <a href="https://www.powershellgallery.com/packages/ProductivityTools.InstallModuleIfMissing/"><img src="Images/Header/Powershell_border_40px.png" /></a>
+    <a href="http://productivitytools.tech/convert-documents/"><img src="Images/Header/ProductivityTools_green_40px_2.png" /><a> 
+    <a href="https://github.com/pwujczyk/ProductivityTools.InstallModuleIfMissing/"><img src="Images/Header/Github_border_40px.png" /></a>
+</p>
+<p align="center">
+    <a href="http://http://productivitytools.tech/">
+        <img src="Images/Header/LogoTitle_green_500px.png" />
+    </a>
+</p>
 
-# ProductivityTools.PSInstallModuleIfMissing
-Checks if given module exists and if not – install it (performs Install-Module method).
+# Install module if missing
+
+Checks if given module is already installed - if not – install it (performs Install-Module command).
+
+<!--more-->
 
 Module can be used in PowerShell profile to setup environment.
 
@@ -12,14 +22,40 @@ To make it full usable before using it in the profile manual check of this modul
 
 
 ````
-$installModuleIfMissing=Get-Module -ListAvailable -Name ProductivityTools.PSInstallModuleIfMissing
+$installModuleIfMissing=Get-Module -ListAvailable -Name ProductivityTools.InstallModuleIfMissing
 if ($installModuleIfMissing -eq $null)
 {
-	Write-Host "Installing ProductivityTools.PSInstallModuleIfMissing"
-	Install-Module "ProductivityTools.PSInstallModuleIfMissing" -Force
+	Write-Host "Installing ProductivityTools.InstallModuleIfMissing"
+	Install-Module "ProductivityTools.InstallModuleIfMissing" -Force
 }
 else
 {
-	Write-Host "`ProductivityTools.PSInstallModuleIfMissing installed"
+	Write-Host "`ProductivityTools.InstallModuleIfMissing installed"
 }
 ````
+
+Instead of using this module you could use ```Install-Module``` all the time, but this work much slower.
+
+
+Example below shows that a lot of modules already are installed on the computer. One of it **ProductivityTools.GetOneDriveDirectory** is not installed and this module installs it. 
+
+```
+Install-ModuleIfMissing ProductivityTools.SQLCommands
+Install-ModuleIfMissing ProductivityTools.SelectSQLView
+Install-ModuleIfMissing ProductivityTools.ConvertTcx2Gpx 
+Install-ModuleIfMissing ProductivityTools.SetLockScreen
+Install-ModuleIfMissing ProductivityTools.SetLockDisplayTimeout
+Install-ModuleIfMissing ProductivityTools.DisplayPosition
+Install-ModuleIfMissing ProductivityTools.ConvertDocuments
+Install-ModuleIfMissing ProductivityTools.GetOneDriveDirectory 
+Install-ModuleIfMissing ProductivityTools.GetDateName 
+Install-ModuleIfMissing ProductivityTools.BackupBookmarksIE
+Install-ModuleIfMissing ProductivityTools.PublishModuleToPowershellGallery
+Install-ModuleIfMissing ProductivityTools.FindModuleDependencies
+Install-ModuleIfMissing ProductivityTools.PublishModuleTo
+Install-ModuleIfMissing ProductivityTools.GetDayInGivenWeek
+Install-ModuleIfMissing ProductivityTools.ImportExcelToSQL
+Install-ModuleIfMissing ProductivityTools.ImportModulesFromDirectory  
+Install-ModuleIfMissing ProductivityTools.MasterConfiguration
+```
+![Profile](Images/profile.png)
