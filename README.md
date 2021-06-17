@@ -60,5 +60,5 @@ Install-ModuleIfMissing ProductivityTools.MasterConfiguration
 ```
 
 Result of the above command.
-
+<!--og-image-->
 ![Profile](Images/profile.png)
